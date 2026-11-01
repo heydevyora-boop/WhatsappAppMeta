@@ -86,8 +86,8 @@ export default function ContactForm() {
         <div className="flex items-start gap-2 pt-1 text-on-surface-variant">
           <Icon name="security" className="text-secondary text-[16px] mt-0.5 flex-shrink-0" />
           <p className="font-label-sm text-label-sm">
-            We reply within 1 business day. Your information is protected under our California and
-            Meta compliant Privacy Policy.
+            We reply within 1 business day. Your information is protected under our Meta compliant
+            Privacy Policy.
           </p>
         </div>
       </form>

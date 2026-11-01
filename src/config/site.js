@@ -10,11 +10,10 @@ export const company = {
   phone: '+91 7747002279',
   // Used for `tel:` links — digits only, no spaces.
   phoneHref: '+917747002279',
-  // TODO: replace with the full registered corporate address before launch.
-  address: 'Add your complete registered business address here',
-  city: 'San Francisco, CA',
-  suite: 'Suite 1250, Financial District',
-  hours: 'Monday – Friday, 9:00 AM – 6:00 PM PST',
+  address: 'Bhopal, Madhya Pradesh, India',
+  city: 'Bhopal, Madhya Pradesh',
+  suite: 'Registered Office',
+  hours: 'Monday – Friday, 9:00 AM – 6:00 PM IST',
   foundedYear: 2025,
 };
 

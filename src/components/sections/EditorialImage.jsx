@@ -1,4 +1,4 @@
-import { media } from '@/config/site';
+import { company, media } from '@/config/site';
 import Icon from '@/components/ui/Icon';
 
 /** Full-bleed operations-centre photograph with a verified location caption. */
@@ -16,7 +16,7 @@ export default function EditorialImage() {
           <div className="flex items-center gap-2 text-on-primary">
             <Icon name="domain_verification" className="text-[18px] text-secondary-container" />
             <span className="font-label-sm text-label-sm">
-              Headquarters Operations • San Francisco Financial District
+              Headquarters Operations • {company.city}
             </span>
           </div>
         </div>

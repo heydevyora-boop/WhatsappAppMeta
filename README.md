@@ -102,16 +102,15 @@ operating hours, registry identifiers and navigation. Change it there and it upd
 
 ### Before going live
 
-1. **Registered address** — `company.address` is a placeholder. Replace it with the full legal
-   address; it appears on the Home, About, Contact, Privacy Policy and Terms pages plus the footer.
-2. **Imagery** — `media.operationsCenter` and `media.officeMap` point at the CDN URLs emitted by
-   Stitch. Download them (or supply your own), place them in `src/assets/`, and import them in
-   `src/config/site.js` so the site has no external image dependency.
-3. **Registry identifiers** — `registry.taxId`, `registry.entityId` and `registry.intakeId` carry
+1. **Imagery** — `media.operationsCenter` and `media.officeMap` point at the CDN URLs emitted by
+   Stitch, and the map still shows the design's placeholder location rather than Bhopal. Replace
+   both with your own images in `src/assets/` and import them in `src/config/site.js`, so the site
+   has no external image dependency and the map matches the registered address.
+2. **Registry identifiers** — `registry.taxId`, `registry.entityId` and `registry.intakeId` carry
    the placeholder values from the design. Replace them with your real filings.
-4. **Contact form** — `src/components/sections/ContactForm.jsx` is UI-only. Wire `handleSubmit`
+3. **Contact form** — `src/components/sections/ContactForm.jsx` is UI-only. Wire `handleSubmit`
    to your endpoint when a backend is available.
-5. **Governing law** — the Terms page is written jurisdiction-neutral. Have counsel confirm the
+4. **Governing law** — the Terms page is written jurisdiction-neutral. Have counsel confirm the
    governing-law and jurisdiction clauses before publishing.
 
 ## License
