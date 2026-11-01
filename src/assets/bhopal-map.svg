@@ -117,10 +117,10 @@
     <text class="lbl" x="900" y="330" font-size="14" font-weight="600" text-anchor="middle" opacity="0.9">MP Nagar</text>
     <text class="lbl" x="1070" y="386" font-size="14" font-weight="600" text-anchor="middle" opacity="0.9">Arera Colony</text>
 
-    <!-- City marker, placed on land between the ring road and MP Nagar -->
-    <text class="lbl" x="1030" y="196" font-size="15" font-weight="700" text-anchor="middle" fill="#0b1c30">Bhopal</text>
-    <text class="lbl" x="1030" y="214" font-size="12" font-weight="500" text-anchor="middle" opacity="0.8">Madhya Pradesh, India</text>
-    <g transform="translate(1030, 240)">
+    <!-- Office marker: Govindpura, in the north-east of the city -->
+    <text class="lbl" x="1150" y="186" font-size="15" font-weight="700" text-anchor="middle" fill="#0b1c30">Govindpura</text>
+    <text class="lbl" x="1150" y="204" font-size="12" font-weight="500" text-anchor="middle" opacity="0.8">Bhopal, Madhya Pradesh</text>
+    <g transform="translate(1150, 230)">
       <circle r="26" fill="#006d2f" opacity="0.14" />
       <circle r="15" fill="#006d2f" opacity="0.22" />
       <circle r="7.5" fill="#006d2f" stroke="#ffffff" stroke-width="3" />
