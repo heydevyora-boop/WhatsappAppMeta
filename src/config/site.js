@@ -34,16 +34,18 @@ export const legal = {
   effectiveDate: 'January 15, 2025',
 };
 
+import officeMap from '@/assets/bhopal-map.svg';
+
 /**
- * Remote imagery exported with the Stitch design.
- * Swap these for self-hosted assets in `src/assets/` before going live —
- * the URLs are CDN-generated and are not guaranteed to be permanent.
+ * Site imagery.
+ * `officeMap` is a self-hosted vector map of Bhopal. `operationsCenter` is
+ * still the CDN URL exported with the Stitch design — swap it for a local
+ * asset in `src/assets/` before going live, as that URL is not permanent.
  */
 export const media = {
+  officeMap,
   operationsCenter:
     'https://lh3.googleusercontent.com/aida-public/AB6AXuD7HR4_r63T9G62HTc6K37Uce1JHe-WBjl9G6IInB7SSD5yLhcvJnpga-L1hjfHW3q1hgpc7_Qv9fjiJybmqZl2mzuvqQ4o8Dr_g6QgfaeBpA7M69VPJ3DCznCrm_YnSVrEhJ9H8dvZZyU3c7SQ006yMANh0zuUr1R7W3xbbo_Btb70QoZ7_NVvHbJAvqMb8x7rk50oFVvbWOQJYW59Xz76YFB_SAsxVepay-15ug8',
-  officeMap:
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuDOSOMM6YzM_ToUtanqDy-qOMajvYomzKULzz6m-9z8fsqDl3wPzl_AmSHMHDJFIuwCC76d2iDMrgsUULqKVZ7LFJo1IeuuxT1CCRkz41nvBfy92XtdaBKiYI172nChHQeQIa2nM3e_aTZfnRCcYWoifBka3vLMnhTb8f0eo0-xdoYv8qPyQhxFB5e3lHwFLD9UxlO0EtsNF9jrfwcCmb4DUvV8ytOIYPmH_Fjwt_0',
 };
 
 /** Primary navigation — drives both the desktop navbar and the mobile tab bar. */

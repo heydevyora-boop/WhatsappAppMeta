@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 480" width="1400" height="480"
+     role="img" aria-label="Stylised map of Bhopal, Madhya Pradesh, showing the Upper and Lower Lakes.">
+  <title>Bhopal, Madhya Pradesh</title>
+
+  <defs>
+    <style>
+      .lbl   { font-family: Inter, 'Helvetica Neue', Arial, sans-serif; fill: #45464d; }
+      .water-lbl { font-family: Inter, 'Helvetica Neue', Arial, sans-serif; fill: #2f6191; }
+      .park-lbl  { font-family: Inter, 'Helvetica Neue', Arial, sans-serif; fill: #3f7049; }
+      .rd    { stroke: #ffffff; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .rd-c  { stroke: #dfe5ee; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .blk   { fill: #e2e8f1; }
+    </style>
+    <clipPath id="frame"><rect width="1400" height="480" /></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <!-- Land base -->
+    <rect width="1400" height="480" fill="#edf1f7" />
+
+    <!-- Built-up block texture -->
+    <g class="blk" opacity="0.75">
+      <rect x="742" y="54"  width="96"  height="46" rx="3" />
+      <rect x="856" y="48"  width="74"  height="60" rx="3" />
+      <rect x="948" y="62"  width="112" height="44" rx="3" />
+      <rect x="760" y="118" width="130" height="38" rx="3" />
+      <rect x="912" y="124" width="88"  height="52" rx="3" />
+      <rect x="946" y="300" width="120" height="58" rx="3" />
+      <rect x="1086" y="296" width="96" height="62" rx="3" />
+      <rect x="958" y="378" width="104" height="48" rx="3" />
+      <rect x="1084" y="378" width="132" height="46" rx="3" />
+      <rect x="1238" y="292" width="104" height="70" rx="3" />
+      <rect x="1240" y="382" width="92"  height="44" rx="3" />
+      <rect x="648" y="366" width="110" height="54" rx="3" />
+      <rect x="520" y="392" width="96"  height="46" rx="3" />
+      <rect x="186" y="78"  width="118" height="42" rx="3" />
+      <rect x="330" y="60"  width="92"  height="52" rx="3" />
+      <rect x="60"  y="382" width="104" height="52" rx="3" />
+    </g>
+
+    <!-- Van Vihar National Park, along the south bank of the Upper Lake -->
+    <path fill="#d7e6d4"
+          d="M178 372 C 252 398 356 408 448 392 C 520 380 578 356 626 330
+             L 664 386 C 608 424 520 446 426 450 C 324 454 232 430 174 404 Z" />
+    <!-- Ekant Park / northern green belt -->
+    <path fill="#d7e6d4" opacity="0.9"
+          d="M612 96 C 664 80 724 82 762 100 L 748 150 C 706 136 658 134 614 146 Z" />
+
+    <!-- Upper Lake (Bhojtal) -->
+    <path fill="#c3d9f2"
+          d="M92 256 C 148 186 250 148 360 145 C 456 142 536 161 592 194
+             C 626 213 646 233 656 251 C 630 281 580 313 520 333
+             C 440 359 348 369 270 359 C 188 348 126 313 92 256 Z" />
+    <!-- Kamla Park causeway channel -->
+    <path fill="#c3d9f2" d="M652 244 L 716 238 L 718 268 L 654 262 Z" />
+    <!-- Lower Lake (Chhota Talab) -->
+    <path fill="#c3d9f2"
+          d="M714 242 C 738 216 782 206 822 214 C 860 222 882 245 878 270
+             C 874 297 840 313 800 311 C 760 309 724 290 714 264 Z" />
+
+    <!-- Shorelines -->
+    <g fill="none" stroke="#a9c6e8" stroke-width="2" opacity="0.8">
+      <path d="M92 256 C 148 186 250 148 360 145 C 456 142 536 161 592 194
+               C 626 213 646 233 656 251 C 630 281 580 313 520 333
+               C 440 359 348 369 270 359 C 188 348 126 313 92 256 Z" />
+      <path d="M714 242 C 738 216 782 206 822 214 C 860 222 882 245 878 270
+               C 874 297 840 313 800 311 C 760 309 724 290 714 264 Z" />
+    </g>
+
+    <!-- Road casings -->
+    <g class="rd-c">
+      <path d="M-20 196 C 120 112 300 74 470 86 C 600 95 690 128 742 180" stroke-width="15" />
+      <path d="M742 180 C 800 150 880 142 952 158 C 1070 184 1180 150 1420 96" stroke-width="15" />
+      <path d="M700 330 C 790 352 880 356 962 342 C 1090 320 1240 330 1420 372" stroke-width="15" />
+      <path d="M742 180 C 760 260 800 330 900 400 C 980 456 1080 486 1200 500" stroke-width="13" />
+      <path d="M160 424 C 300 452 470 460 626 436 C 760 416 880 404 1000 410" stroke-width="11" />
+      <path d="M470 86 C 500 170 540 250 620 322 C 680 376 760 420 860 448" stroke-width="9" />
+      <path d="M952 158 L 968 470" stroke-width="9" />
+      <path d="M1128 170 L 1148 470" stroke-width="9" />
+      <path d="M1296 150 L 1312 470" stroke-width="9" />
+      <path d="M700 108 L 1420 212" stroke-width="9" />
+    </g>
+
+    <!-- Road fills -->
+    <g class="rd">
+      <path d="M-20 196 C 120 112 300 74 470 86 C 600 95 690 128 742 180" stroke-width="11" />
+      <path d="M742 180 C 800 150 880 142 952 158 C 1070 184 1180 150 1420 96" stroke-width="11" />
+      <path d="M700 330 C 790 352 880 356 962 342 C 1090 320 1240 330 1420 372" stroke-width="11" />
+      <path d="M742 180 C 760 260 800 330 900 400 C 980 456 1080 486 1200 500" stroke-width="9" />
+      <path d="M160 424 C 300 452 470 460 626 436 C 760 416 880 404 1000 410" stroke-width="7" />
+      <path d="M470 86 C 500 170 540 250 620 322 C 680 376 760 420 860 448" stroke-width="5" />
+      <path d="M952 158 L 968 470" stroke-width="5" />
+      <path d="M1128 170 L 1148 470" stroke-width="5" />
+      <path d="M1296 150 L 1312 470" stroke-width="5" />
+      <path d="M700 108 L 1420 212" stroke-width="5" />
+    </g>
+
+    <!-- Railway corridor -->
+    <g fill="none" stroke="#b6bdc9" stroke-width="4">
+      <path d="M690 -10 C 724 120 790 250 880 350 C 950 428 1040 470 1140 480" />
+    </g>
+    <g fill="none" stroke="#ffffff" stroke-width="3" stroke-dasharray="9 9">
+      <path d="M690 -10 C 724 120 790 250 880 350 C 950 428 1040 470 1140 480" />
+    </g>
+
+    <!-- Labels.
+         The container crops this art with background-size: cover, so every
+         label is kept inside the x 170-1230 / y 80-400 safe area that stays
+         visible from the narrowest phone through to the widest desktop. -->
+    <text class="water-lbl" x="330" y="258" font-size="22" font-weight="600" text-anchor="middle">Upper Lake</text>
+    <text class="water-lbl" x="330" y="282" font-size="14" font-weight="500" text-anchor="middle" opacity="0.85">Bhojtal</text>
+    <text class="water-lbl" x="796" y="268" font-size="13" font-weight="600" text-anchor="middle">Lower Lake</text>
+    <text class="park-lbl" x="400" y="390" font-size="14" font-weight="600" text-anchor="middle">Van Vihar National Park</text>
+    <text class="lbl" x="250" y="100" font-size="14" font-weight="600" opacity="0.9">Old City</text>
+    <text class="lbl" x="800" y="92" font-size="14" font-weight="600" opacity="0.9">Chowk</text>
+    <text class="lbl" x="700" y="386" font-size="14" font-weight="600" text-anchor="middle" opacity="0.9">New Market</text>
+    <text class="lbl" x="900" y="330" font-size="14" font-weight="600" text-anchor="middle" opacity="0.9">MP Nagar</text>
+    <text class="lbl" x="1070" y="386" font-size="14" font-weight="600" text-anchor="middle" opacity="0.9">Arera Colony</text>
+
+    <!-- City marker, placed on land between the ring road and MP Nagar -->
+    <text class="lbl" x="1030" y="196" font-size="15" font-weight="700" text-anchor="middle" fill="#0b1c30">Bhopal</text>
+    <text class="lbl" x="1030" y="214" font-size="12" font-weight="500" text-anchor="middle" opacity="0.8">Madhya Pradesh, India</text>
+    <g transform="translate(1030, 240)">
+      <circle r="26" fill="#006d2f" opacity="0.14" />
+      <circle r="15" fill="#006d2f" opacity="0.22" />
+      <circle r="7.5" fill="#006d2f" stroke="#ffffff" stroke-width="3" />
+    </g>
+  </g>
+</svg>

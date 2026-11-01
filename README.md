@@ -102,10 +102,11 @@ operating hours, registry identifiers and navigation. Change it there and it upd
 
 ### Before going live
 
-1. **Imagery** — `media.operationsCenter` and `media.officeMap` point at the CDN URLs emitted by
-   Stitch, and the map still shows the design's placeholder location rather than Bhopal. Replace
-   both with your own images in `src/assets/` and import them in `src/config/site.js`, so the site
-   has no external image dependency and the map matches the registered address.
+1. **Imagery** — `media.officeMap` is a self-hosted vector map of Bhopal
+   (`src/assets/bhopal-map.svg`): a stylised illustration of the city's geography, not a
+   cartographic export. Swap in a real map export if you want street-level accuracy.
+   `media.operationsCenter` still points at the CDN URL emitted by Stitch — replace it with a
+   local asset in `src/assets/` so the site has no external image dependency.
 2. **Registry identifiers** — `registry.taxId`, `registry.entityId` and `registry.intakeId` carry
    the placeholder values from the design. Replace them with your real filings.
 3. **Contact form** — `src/components/sections/ContactForm.jsx` is UI-only. Wire `handleSubmit`
