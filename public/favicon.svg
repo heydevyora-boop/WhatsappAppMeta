@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="Devyora">
+  <rect width="40" height="40" rx="8" fill="#131b2e"/>
+  <path d="M20 7.5 30.5 11.6v8.1c0 6.3-4.3 10.9-10.5 13.3C13.8 30.6 9.5 26 9.5 19.7v-8.1L20 7.5Z" fill="#006d2f"/>
+  <path d="m15.6 20.2 3.2 3.3 6-6.6" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

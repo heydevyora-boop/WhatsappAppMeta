@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: theme('colors.surface');
+    color: theme('colors.on-surface');
+    font-family: theme('fontFamily.sans');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Tabular figures for registration numbers, IDs, dates and timestamps. */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.on-surface');
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Safe-area helpers carried over from the Stitch mobile shell. */
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* 1280px twelve-column container with the responsive outer margins
+     specified in DESIGN.md (1rem mobile → 1.5rem tablet → 2rem desktop). */
+  .container-page {
+    @apply w-full max-w-page mx-auto px-gutter-mobile md:px-gutter lg:px-margin;
+  }
+
+  /* 840px single-column reading measure used by the legal documents. */
+  .container-doc {
+    @apply w-full max-w-doc mx-auto px-gutter-mobile md:px-gutter lg:px-margin;
+  }
+
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+  }
+}
