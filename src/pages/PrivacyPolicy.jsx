@@ -1,8 +1,10 @@
 import { company, gst, legal } from '@/config/site';
 import {
-  dataCollected,
+  dataCollectedToday,
+  dataPlannedViaCloudApi,
   processingPurposes,
   thirdParties,
+  optOutMethods,
   dataRights,
   jumpLinks,
 } from '@/data/privacy';
@@ -112,13 +114,13 @@ export default function PrivacyPolicy() {
         </nav>
 
         {/* Clause 1 */}
-        <ClauseSection id="section-1" index="1" title="Information We Collect">
+        <ClauseSection id="section-1" index="1" title="Information We Collect Today">
           <p className="font-body-md text-body-md text-on-surface-variant">
-            We collect only what we need in order to answer your enquiry and serve you as a
-            customer:
+            Through the channels we use today — phone, email and this website — we collect only
+            what we need in order to answer your enquiry and serve you as a customer:
           </p>
           <div className="space-y-2">
-            {dataCollected.map((item) => (
+            {dataCollectedToday.map((item) => (
               <div
                 key={item.title}
                 className="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm"
@@ -171,35 +173,47 @@ export default function PrivacyPolicy() {
         <ClauseSection
           id="section-3"
           index="3"
-          title="WhatsApp Messages & Communication Data"
+          title="Planned: WhatsApp Business Platform (Cloud API)"
           highlight
         >
+          <p className="inline-flex items-center gap-1.5 self-start px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+            <span className="w-1.5 h-1.5 rounded-full bg-outline" aria-hidden="true" />
+            <span>Planned Integration – Not Yet Live</span>
+          </p>
           <p className="font-body-md text-body-md text-on-surface-variant">
-            We use the WhatsApp Business Platform (Cloud API) on our own business numbers to receive
-            customer enquiries, reply to customers and send message templates that have been
-            approved for use.
+            We plan to use Meta’s official WhatsApp Business Platform (Cloud API) on our own
+            business numbers. That integration is <strong>not live</strong>, and none of the
+            information described in this clause is being collected through the Cloud API today.
+            This clause is published in advance so that you know what would change.
           </p>
           <div className="space-y-2">
-            <div className="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+            {dataPlannedViaCloudApi.map((item) => (
+              <div
+                key={item.title}
+                className="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm"
+              >
+                <Icon name={item.icon} className="text-secondary text-[20px] mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col">
+                  <span className="font-label-md text-label-md text-on-surface font-semibold">
+                    {item.title}
+                  </span>
+                  <span className="font-body-sm text-body-sm text-on-surface-variant">
+                    {item.description}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="p-space-sm rounded-lg bg-surface-container-high flex items-start gap-space-sm">
+            <Icon name="update" className="text-secondary text-[20px] flex-shrink-0 mt-0.5" />
+            <div className="flex flex-col">
               <span className="font-label-md text-label-md text-on-surface font-semibold">
-                What happens to your messages
+                We Will Update This Page First
               </span>
-              <p className="font-body-sm text-body-sm text-on-surface-variant">
-                Messages you send to our WhatsApp business number are delivered through Meta’s
-                systems and are also handled under Meta’s and WhatsApp’s own terms and privacy
-                policies. On our side, we store the conversation so that our team can read it,
-                answer you and refer back to it if you contact us again.
-              </p>
-            </div>
-            <div className="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-              <span className="font-label-md text-label-md text-on-surface font-semibold">
-                When we message you
+              <span className="font-body-sm text-body-sm text-on-surface-variant">
+                If the integration goes live, we will update this policy and change the date shown
+                at the top before we begin collecting this information.
               </span>
-              <p className="font-body-sm text-body-sm text-on-surface-variant">
-                We send WhatsApp messages only to people who have contacted us or have agreed to
-                hear from us. You can tell us to stop at any time by replying STOP, and we will stop
-                sending you messages.
-              </p>
             </div>
           </div>
         </ClauseSection>
@@ -216,8 +230,13 @@ export default function PrivacyPolicy() {
                 key={item.title}
                 className="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1"
               >
-                <span className="font-label-md text-label-md text-on-surface font-semibold">
-                  {item.title}
+                <span className="flex items-center justify-between gap-2">
+                  <span className="font-label-md text-label-md text-on-surface font-semibold">
+                    {item.title}
+                  </span>
+                  <span className="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded whitespace-nowrap">
+                    {item.status}
+                  </span>
                 </span>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
                   {item.description}
@@ -231,33 +250,72 @@ export default function PrivacyPolicy() {
         <ClauseSection id="section-5" index="5" title="Storage, Retention & Deletion">
           <div className="space-y-2">
             <div className="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-              <Icon name="cloud" className="text-secondary text-[20px]" />
+              <Icon name="folder_managed" className="text-secondary text-[20px]" />
               <span className="font-label-md text-label-md text-on-surface font-semibold">
                 How we store it
               </span>
               <span className="font-body-sm text-body-sm text-on-surface-variant">
-                Enquiries and conversations are kept in the business systems we use to manage
-                customer communication. Access is limited to the people in our business who need it
-                to do their work.
+                Enquiries and customer records are kept in the business systems we use to manage
+                customer communication. We limit access to the people in our business who need it
+                for their work.
               </span>
             </div>
             <div className="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
-              <Icon name="auto_delete" className="text-secondary text-[20px]" />
+              <Icon name="history" className="text-secondary text-[20px]" />
               <span className="font-label-md text-label-md text-on-surface font-semibold">
                 How long we keep it
               </span>
               <span className="font-body-sm text-body-sm text-on-surface-variant">
-                We keep your information for as long as we need it to deal with your enquiry and to
-                maintain our relationship with you as a customer, plus any period for which we are
-                required to keep business or tax records under Indian law. After that we delete it
-                or stop using it.
+                We keep your information while we are dealing with your enquiry and for as long as
+                you remain our customer. Some records must be kept longer because Indian tax and
+                business law requires it. Where that does not apply, we delete information once we
+                no longer need it.
               </span>
             </div>
           </div>
-          <p className="font-body-sm text-body-sm text-on-surface-variant">
-            If you ask us to delete your information, we will do so unless we are required to keep
-            it for legal or accounting reasons — in which case we will tell you.
-          </p>
+
+          <div className="p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-space-xs">
+            <span className="font-label-md text-label-md text-on-surface font-semibold">
+              How to ask us to delete your information
+            </span>
+            <ol className="font-body-sm text-body-sm text-on-surface-variant space-y-1.5 list-none">
+              <li className="flex items-start gap-2">
+                <span className="font-label-sm text-label-sm text-outline tnum mt-0.5">1.</span>
+                <span>
+                  Email us at{' '}
+                  <a className="text-secondary underline break-all" href={`mailto:${company.email}`}>
+                    {company.email}
+                  </a>{' '}
+                  or call us on{' '}
+                  <a className="text-secondary underline tnum" href={`tel:${company.phoneHref}`}>
+                    {company.phone}
+                  </a>
+                  .
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="font-label-sm text-label-sm text-outline tnum mt-0.5">2.</span>
+                <span>
+                  Tell us what you would like deleted — for example your contact details, or your
+                  enquiry history.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="font-label-sm text-label-sm text-outline tnum mt-0.5">3.</span>
+                <span>
+                  We may ask you to confirm your identity first, so that we do not act on someone
+                  else’s instruction about your information.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="font-label-sm text-label-sm text-outline tnum mt-0.5">4.</span>
+                <span>
+                  We will delete what we can and tell you if anything has to be kept because the law
+                  requires it.
+                </span>
+              </li>
+            </ol>
+          </div>
         </ClauseSection>
 
         {/* Clause 6 */}
@@ -278,11 +336,24 @@ export default function PrivacyPolicy() {
               </div>
             ))}
           </div>
-          <p className="font-body-sm text-body-sm text-on-surface-variant">
-            To make any of these requests, write to us at the email address below. We may ask you to
-            confirm your identity before we act, so that we do not disclose your information to
-            someone else.
-          </p>
+
+          <div className="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+            <span className="font-label-md text-label-md text-on-surface font-semibold">
+              Asking us to stop messaging you
+            </span>
+            <p className="font-body-sm text-body-sm text-on-surface-variant">
+              Replying STOP is not the only way. You can ask us to stop in any of these ways, and we
+              will respect any reasonable request however it reaches us:
+            </p>
+            <ul className="font-body-sm text-body-sm text-on-surface-variant space-y-1">
+              {optOutMethods.map((method) => (
+                <li key={method} className="flex items-start gap-2">
+                  <Icon name="check" className="text-secondary text-[14px] mt-1 flex-shrink-0" />
+                  <span>{method}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </ClauseSection>
 
         {/* Clause 7 */}

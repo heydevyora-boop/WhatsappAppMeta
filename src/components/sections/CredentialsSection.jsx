@@ -26,7 +26,7 @@ export default function CredentialsSection() {
 
         <div className="flex flex-col gap-space-sm">
           <span className="font-label-md text-label-md text-outline uppercase tracking-wider">
-            How We Message Customers
+            How We Plan to Message Customers
           </span>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-space-sm">
             {messagingPractices.map((item) => (

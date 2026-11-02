@@ -10,19 +10,19 @@ export const whatsappUsage = [
     icon: 'smartphone',
     title: 'Our Own Business Numbers',
     description:
-      'We use the WhatsApp Business Platform only on WhatsApp numbers that belong to Aayushi Creations.',
+      'We would use the WhatsApp Business Platform only on WhatsApp numbers that belong to Aayushi Creations.',
   },
   {
     icon: 'how_to_reg',
     title: 'Opt-In Before We Message',
     description:
-      'We message people who have contacted us or who have agreed to receive messages from us.',
+      'We would message only people who have contacted us or who have agreed to receive messages from us.',
   },
   {
     icon: 'do_not_disturb_on',
     title: 'Opt-Out On Request',
     description:
-      'Reply STOP at any time and we will stop sending you WhatsApp messages from our business.',
+      'Reply STOP, or simply tell us by phone or email. We respect any reasonable request to stop messaging.',
   },
 ];
 

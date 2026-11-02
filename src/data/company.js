@@ -34,9 +34,9 @@ export const businessOverview = [
   },
   {
     icon: 'chat',
-    title: 'How We Use WhatsApp',
+    title: 'Planned Use of WhatsApp',
     description:
-      'We use the WhatsApp Business Platform for our own business numbers only — to receive customer enquiries, manage leads, hold customer conversations and send approved message templates.',
+      'We plan to use Meta’s official WhatsApp Business Platform on our own business numbers only — to receive customer enquiries, manage leads, hold customer conversations and send message templates once approved. This integration is not yet live.',
   },
   {
     icon: 'lock',
@@ -51,23 +51,26 @@ export const messagingPractices = [
   {
     icon: 'how_to_reg',
     title: 'Opt-In Messaging Only',
-    description: 'We message people who have contacted us or agreed to hear from us.',
+    description:
+      'We would message only people who have contacted us or agreed to hear from us.',
   },
   {
     icon: 'do_not_disturb_on',
     title: 'Opt-Out Honoured',
-    description: 'Anyone can reply STOP at any time and we will stop messaging them.',
+    description:
+      'Reply STOP, or tell us by phone or email. We respect any reasonable request to stop messaging.',
   },
   {
     icon: 'badge',
-    title: 'Name Matches Registration',
-    description: 'Our WhatsApp display name matches our GST trade name, Aayushi Creations.',
+    title: 'Name Will Match Registration',
+    description:
+      'Any WhatsApp display name we apply for will match our GST trade name, Aayushi Creations. No display name has been approved yet.',
   },
 ];
 
 /** Scope statement for our intended WhatsApp Business Platform use. */
 export const platformUsage = [
-  'We use the WhatsApp Business Platform only for our own business numbers.',
+  'We would use the WhatsApp Business Platform only on our own business numbers.',
   'We do not provide WhatsApp API services, onboarding or messaging to other businesses.',
-  'Message templates are submitted for approval before use, as the platform requires.',
+  'Message templates would be submitted to Meta for approval before any use.',
 ];

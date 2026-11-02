@@ -85,9 +85,9 @@ export const capabilities = [
       'Customer contact details, conversations, enquiry records and message statuses would be stored in our own internal CRM database.',
     points: [
       'Access limited to the people in our business who need it for their work.',
-      'Held on systems we control, protected by account-level access controls.',
-      'Kept only as long as we need it for the customer relationship and for statutory records.',
-      'Deleted on request, as set out in our Privacy Policy.',
+      'Held in the business systems we use to manage customer communication.',
+      'Kept while we need it for the customer relationship, and longer only where Indian law requires it.',
+      'Deleted on request — the steps are set out in our Privacy Policy.',
     ],
   },
 ];
@@ -136,7 +136,7 @@ export const complianceCommitments = [
   'Meta is the official provider of the WhatsApp Business Platform. Aayushi Creations is not a Meta Partner, and makes no claim of Meta approval, verification or endorsement.',
   'We message only people who have contacted us or who have opted in to hear from us.',
   'Marketing templates are submitted to Meta for approval before they are used.',
-  'Anyone can reply STOP at any time, and we stop messaging them.',
+  'Anyone can ask us to stop messaging them — by replying STOP, or by phone or email. We respect any reasonable request.',
   'Messaging volume is subject to the limits Meta applies per number. We make no claim of unlimited messaging.',
   'Conversation pricing set by Meta applies to the messages we send.',
   'The platform would be used for our own business operations only. We do not provide WhatsApp API services, onboarding or subscription plans to other businesses.',

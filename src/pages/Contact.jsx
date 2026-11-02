@@ -49,8 +49,9 @@ export default function Contact() {
         </div>
 
         <p className="font-body-md text-body-md md:font-body-lg md:text-body-lg text-on-surface-variant max-w-3xl">
-          Reach us at our registered place of business in Govindpura, Bhopal, or send an enquiry
-          using the form below.
+          Reach us by phone or email, or at our registered place of business in Govindpura,
+          Bhopal. The enquiry form further down this page is a demonstration only and does not
+          send anything.
         </p>
 
         {/* Direct contact channels */}

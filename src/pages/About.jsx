@@ -106,7 +106,7 @@ export default function About() {
 
           <div className="flex flex-col gap-space-sm">
             <span className="font-label-md text-label-md text-outline uppercase tracking-wider">
-              How We Message Customers
+              How We Plan to Message Customers
             </span>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-space-sm">
               {messagingPractices.map((item) => (
@@ -128,7 +128,7 @@ export default function About() {
               Have a question about our business?
             </span>
             <span className="font-body-sm text-body-sm text-on-surface-variant">
-              Send us an enquiry and we will get back to you.
+              Call or email us using the details on our contact page.
             </span>
           </div>
           <Button to="/contact" icon="arrow_forward" iconPosition="right" className="mt-1">

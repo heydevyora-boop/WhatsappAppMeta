@@ -93,10 +93,15 @@ export default function TermsConditions() {
 
         {/* Clause 3 */}
         <ClauseSection index="3" title="WhatsApp &amp; Business Communication">
+          <p className="inline-flex items-center gap-1.5 self-start px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+            <span className="w-1.5 h-1.5 rounded-full bg-outline" aria-hidden="true" />
+            <span>Planned Integration – Not Yet Live</span>
+          </p>
           <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            {company.tradeName} uses Meta’s WhatsApp Business Platform (Cloud API) for its own
-            internal customer communication — receiving enquiries, managing customer leads, holding
-            conversations with customers and sending approved message templates.
+            {company.tradeName} plans to use Meta’s official WhatsApp Business Platform (Cloud API)
+            for its own internal customer communication — receiving enquiries, managing customer
+            leads, holding conversations with customers and sending message templates once they are
+            approved. This integration is not yet live.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pt-1">
             {whatsappUsage.map((item) => (
@@ -120,7 +125,8 @@ export default function TermsConditions() {
             WhatsApp is operated by Meta. Your use of WhatsApp is also governed by Meta’s and
             WhatsApp’s own terms and policies, which are separate from these terms. Nothing on this
             website should be read as a statement that Meta has approved, verified, endorsed or
-            partnered with {company.tradeName}.
+            partnered with {company.tradeName}, or that any API access, phone number, display name
+            or messaging permission has already been granted.
           </p>
         </ClauseSection>
 

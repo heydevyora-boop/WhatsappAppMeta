@@ -118,7 +118,7 @@ export default function WhatsAppIntegration() {
               Questions about how we use WhatsApp?
             </span>
             <span className="font-body-sm text-body-sm text-on-surface-variant">
-              Send us an enquiry and we will get back to you.
+              Call or email us using the details on our contact page.
             </span>
           </div>
           <Button to="/contact" icon="arrow_forward" iconPosition="right" className="mt-1">

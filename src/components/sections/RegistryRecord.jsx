@@ -98,23 +98,13 @@ export default function RegistryRecord() {
         </div>
       </div>
 
-      {/* Certificate provenance */}
-      <div className="p-3 bg-surface-container-low rounded-lg flex items-center justify-between gap-2">
-        <div className="flex items-center gap-2 min-w-0">
-          <Icon name="assured_workload" className="text-secondary text-[20px] flex-shrink-0" />
-          <div className="flex flex-col min-w-0">
-            <span className="font-label-sm text-label-sm font-semibold text-on-surface">
-              Government of India — {gst.form}
-            </span>
-            <span className="font-label-sm text-label-sm text-outline">
-              {gst.approvingAuthority} • Jurisdiction {gst.jurisdictionalOffice}
-            </span>
-          </div>
-        </div>
-        <span className="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap tnum">
-          Issued {gst.certificateIssued}
-        </span>
-      </div>
+      {/* Provenance of the figures above — not a separate credential */}
+      <p className="pt-space-xs border-t border-outline-variant font-label-sm text-label-sm text-on-surface-variant">
+        All details above are taken from a single document: our GST Registration Certificate
+        ({gst.form}), issued {gst.certificateIssued} by the jurisdictional authority
+        ({gst.jurisdictionalOffice}) under the {gst.approvingAuthority}. The business holds no
+        other registration or certification.
+      </p>
     </Card>
   );
 }

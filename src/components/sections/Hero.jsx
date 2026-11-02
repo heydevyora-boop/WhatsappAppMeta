@@ -27,9 +27,14 @@ export default function Hero() {
 
           <p className="font-body-md text-body-md md:font-body-lg md:text-body-lg text-on-surface-variant max-w-2xl">
             Aayushi Creations is a GST-registered proprietorship business based in the Govindpura
-            industrial area of Bhopal, Madhya Pradesh. We use the WhatsApp Business Platform on our
-            own business numbers to receive customer enquiries, manage leads and handle our customer
-            conversations.
+            industrial area of Bhopal, Madhya Pradesh. We plan to use Meta’s official WhatsApp
+            Business Platform on our own business numbers to receive customer enquiries, manage
+            leads and handle our customer conversations.
+          </p>
+
+          <p className="inline-flex items-center gap-1.5 self-start px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+            <span className="w-1.5 h-1.5 rounded-full bg-outline" aria-hidden="true" />
+            <span>WhatsApp integration: Planned Integration – Not Yet Live</span>
           </p>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm pt-space-xs">

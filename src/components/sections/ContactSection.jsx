@@ -11,7 +11,7 @@ export default function ContactSection({ showHeading = true }) {
           icon="support_agent"
           eyebrow="Get in Touch"
           title="Contact Aayushi Creations"
-          description="Send us an enquiry and we will get back to you at the contact details you provide."
+          description="Call or email us using the details below. The form on this page is a demonstration and does not send anything."
         />
       )}
 

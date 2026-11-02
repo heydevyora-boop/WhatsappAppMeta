@@ -16,8 +16,17 @@ true and evidenced:
 - **Do not add** registration numbers, certifications (ISO, SOC 2, GDPR), uptime figures, SLAs,
   or any claim that Meta has approved, verified or partnered with the business, unless the
   business actually holds that evidence.
-- The business uses the WhatsApp Business Platform **internally, on its own numbers only**. It
-  does not provide WhatsApp API services to other businesses, and the site must not say it does.
+- The business **plans** to use the WhatsApp Business Platform internally, on its own numbers
+  only. The integration is **not live**. Write about it in the future tense, keep the
+  "Planned Integration – Not Yet Live" status visible, and never imply that API access, a phone
+  number, a display name, a template or any Meta permission has already been approved.
+- The business does not provide WhatsApp API services to other businesses, and the site must
+  not say it does.
+- **This repository is frontend only.** There is no backend, database or API integration. The
+  enquiry form in `src/components/sections/ContactForm.jsx` is a demonstration: it submits
+  nothing, stores nothing, and its UI must keep saying so.
+- Do not state retention periods, response deadlines or security guarantees that the business
+  has not actually committed to.
 
 ## Tech stack
 
@@ -52,14 +61,18 @@ npm run preview
 
 ## Pages
 
-| Route                   | Page               |
-| ----------------------- | ------------------ |
-| `/`                     | Home               |
-| `/about`                | About              |
-| `/contact`              | Contact            |
-| `/privacy-policy`       | Privacy Policy     |
-| `/terms-and-conditions` | Terms & Conditions |
-| `*`                     | 404 — Not Found    |
+| Route                    | Page                                | In main nav |
+| ------------------------ | ----------------------------------- | ----------- |
+| `/`                      | Home                                | Yes         |
+| `/about`                 | About                               | Yes         |
+| `/whatsapp-integration`  | WhatsApp Business Platform (planned) | Yes        |
+| `/contact`               | Contact                             | Yes         |
+| `/privacy-policy`        | Privacy Policy                      | Footer      |
+| `/terms-and-conditions`  | Terms & Conditions                  | Footer      |
+| `*`                      | 404 — Not Found                     | —           |
+
+Routes are declared in `src/App.jsx`; the navigation entries that point at them
+live in `navLinks` / `legalLinks` in `src/config/site.js`.
 
 ## Folder structure
 
@@ -106,17 +119,22 @@ Design tokens — colours, typography scale, spacing, radii and elevation — li
 
 ## Outstanding items for the owner
 
-1. **Website domain** — the business email is `info@devyora.com`, but the GST trade name is
-   AAYUSHI CREATIONS. Verification reviewers generally expect the website domain, the business
-   name and the WhatsApp display name to line up.
-2. **What the business sells** — the site does not describe the products or services, because
-   that is not on the GST certificate. Supply the real description to add a products section.
-3. **Business hours** — not stated anywhere on the site, as they were not supplied.
-4. **Photographs** — no images of the premises or products are used. Real photographs would
-   strengthen the site.
-5. **The map** (`src/assets/bhopal-map.svg`) is a stylised illustration marking the Govindpura
-   area, not a surveyed map. Replace it with a real map export if precision matters.
-6. **Legal review** — the Privacy Policy and Terms describe current practice in plain language.
+These are gaps that need your confirmation. Nothing has been invented to fill them.
+
+1. **Business activities / products** — the site does not describe what Aayushi Creations makes
+   or sells, because that is not on the GST certificate and was never supplied. A products or
+   services section should be added once you provide accurate wording.
+2. **Website domain** — the business email is `info@devyora.com` while the GST trade name is
+   AAYUSHI CREATIONS. The site makes no claim about how the two relate, because the relationship
+   has not been confirmed. Verification reviewers generally expect the domain, the business name
+   and the WhatsApp display name to line up.
+3. **Business hours** — not stated anywhere, as they were not supplied.
+4. **Photographs** — no images of the premises or products are used.
+5. **Contact form** — currently a demonstration with no backend. It needs a form handler or an
+   email service before it can accept real enquiries.
+6. **The map** (`src/assets/bhopal-map.svg`) is a stylised illustration marking the Govindpura
+   area, not a surveyed map.
+7. **Legal review** — the Privacy Policy and Terms describe current practice in plain language.
    Have them checked by a professional before relying on them.
 
 ## License

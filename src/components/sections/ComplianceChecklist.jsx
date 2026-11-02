@@ -10,9 +10,11 @@ export default function ComplianceChecklist() {
       <Card className="p-4 flex flex-col gap-space-sm">
         <div className="flex items-center justify-between gap-2">
           <span className="font-label-md text-label-md text-on-surface font-semibold">
-            Our WhatsApp Business Platform Usage
+            Planned WhatsApp Business Platform Usage
           </span>
-          <Icon name="chat" className="text-secondary text-[18px] flex-shrink-0" />
+          <span className="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded whitespace-nowrap">
+            Not Yet Live
+          </span>
         </div>
         <ul className="space-y-2 font-label-sm text-label-sm text-on-surface-variant">
           {platformUsage.map((item) => (
