@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { platformUsage } from '@/data/company';
 import Card from '@/components/ui/Card';
 import Icon from '@/components/ui/Icon';
@@ -21,6 +22,13 @@ export default function ComplianceChecklist() {
             </li>
           ))}
         </ul>
+        <Link
+          to="/whatsapp-integration"
+          className="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:underline"
+        >
+          <span>See our planned WhatsApp Business Platform integration</span>
+          <Icon name="arrow_forward" className="text-[16px]" />
+        </Link>
       </Card>
     </section>
   );

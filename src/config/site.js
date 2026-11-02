@@ -79,6 +79,7 @@ export const media = {
 export const navLinks = [
   { label: 'Home', path: '/', icon: 'business' },
   { label: 'About', path: '/about', icon: 'info' },
+  { label: 'WhatsApp', path: '/whatsapp-integration', icon: 'chat' },
   { label: 'Contact', path: '/contact', icon: 'support_agent' },
 ];
 
