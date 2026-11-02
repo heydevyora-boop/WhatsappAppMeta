@@ -9,7 +9,7 @@ export default function LocationSection() {
         <div className="flex items-center gap-2 min-w-0">
           <Icon name="pin_drop" className="text-outline text-[18px] flex-shrink-0" />
           <span className="font-label-md text-label-md text-on-surface truncate">
-            Registered Office Physical Location
+            Principal Place of Business
           </span>
         </div>
         <span className="font-label-sm text-label-sm text-secondary whitespace-nowrap">
@@ -19,13 +19,13 @@ export default function LocationSection() {
 
       <div
         role="img"
-        aria-label={`Map showing the registered office of ${company.name}`}
+        aria-label={`Illustrative map of Bhopal marking the Govindpura industrial area, where ${company.tradeName} is registered`}
         className="w-full h-40 md:h-56 lg:h-72 bg-cover bg-center rounded-xl shadow-sm relative overflow-hidden"
         style={{ backgroundImage: `url('${media.officeMap}')` }}
       >
         <div className="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded shadow-sm text-on-surface font-label-sm text-label-sm flex items-center gap-1.5">
           <span className="w-2 h-2 rounded-full bg-secondary" aria-hidden="true" />
-          <span>{company.suite}</span>
+          <span>{company.locality}</span>
         </div>
       </div>
     </section>

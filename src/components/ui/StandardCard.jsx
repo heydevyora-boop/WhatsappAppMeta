@@ -1,7 +1,7 @@
 import Card from './Card';
 import Icon from './Icon';
 
-/** Enterprise service standard row with a trailing confirmation check. */
+/** Practice row with a trailing confirmation check. */
 export default function StandardCard({ icon, title, description }) {
   return (
     <Card className="p-3 h-full flex items-center justify-between gap-3">

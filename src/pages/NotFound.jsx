@@ -3,7 +3,7 @@ import Icon from '@/components/ui/Icon';
 import usePageTitle from '@/hooks/usePageTitle';
 
 export default function NotFound() {
-  usePageTitle('Page Not Found — Devyora');
+  usePageTitle('Page Not Found — Aayushi Creations');
 
   return (
     <section className="container-doc py-space-xl flex flex-col items-center text-center gap-space-md min-h-[50vh] justify-center">
@@ -15,7 +15,7 @@ export default function NotFound() {
           Page Not Found
         </h1>
         <p className="font-body-md text-body-md text-on-surface-variant">
-          The record you requested is unavailable or has been relocated.
+          The page you requested is unavailable or has been moved.
         </p>
       </div>
       <Button to="/" icon="arrow_back">

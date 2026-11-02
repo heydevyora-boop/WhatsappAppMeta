@@ -9,9 +9,9 @@ export default function ContactSection({ showHeading = true }) {
       {showHeading && (
         <SectionHeading
           icon="support_agent"
-          eyebrow="Inquiries & Review Correspondence"
-          title="Get in Touch with Our Team"
-          description="Reach out for business verification support, enterprise provisioning, or technical audits."
+          eyebrow="Get in Touch"
+          title="Contact Aayushi Creations"
+          description="Send us an enquiry and we will get back to you at the contact details you provide."
         />
       )}
 

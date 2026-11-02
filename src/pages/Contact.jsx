@@ -9,22 +9,22 @@ import usePageTitle from '@/hooks/usePageTitle';
 const CHANNELS = [
   {
     icon: 'mark_email_read',
-    label: 'Verified Business Email',
+    label: 'Business Email',
     value: company.email,
     href: `mailto:${company.email}`,
-    action: 'Dispatch',
+    action: 'Email',
   },
   {
-    icon: 'support_agent',
-    label: 'Corporate Telephone',
+    icon: 'call',
+    label: 'Business Phone',
     value: company.phone,
     href: `tel:${company.phoneHref}`,
-    action: 'Dial',
+    action: 'Call',
   },
 ];
 
 export default function Contact() {
-  usePageTitle(`Contact ${company.name} — Enterprise & Compliance Desk`);
+  usePageTitle(`Contact ${company.tradeName} — Bhopal, Madhya Pradesh`);
 
   return (
     <>
@@ -35,25 +35,25 @@ export default function Contact() {
         <div className="inline-flex items-center gap-2 self-start bg-surface-container-low px-3 py-1.5 rounded-full shadow-sm">
           <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" aria-hidden="true" />
           <span className="font-label-sm text-label-sm text-on-surface font-semibold tracking-tight">
-            Compliance Desk • Response within 1 business day
+            {company.tagline}
           </span>
         </div>
 
         <div className="flex flex-col gap-space-xs">
           <span className="font-label-md text-label-md text-secondary uppercase tracking-wider">
-            Inquiries &amp; Review Correspondence
+            Get in Touch
           </span>
           <h1 className="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight">
-            Get in Touch with Our Team
+            Contact {company.tradeName}
           </h1>
         </div>
 
         <p className="font-body-md text-body-md md:font-body-lg md:text-body-lg text-on-surface-variant max-w-3xl">
-          Reach out for business verification support, enterprise provisioning, or technical audits.
-          Every inquiry is routed directly to our corporate compliance desk.
+          Reach us at our registered place of business in Govindpura, Bhopal, or send an enquiry
+          using the form below.
         </p>
 
-        {/* Quick-dial channels */}
+        {/* Direct contact channels */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs">
           {CHANNELS.map((channel) => (
             <Card key={channel.label} className="p-space-sm flex items-center justify-between gap-2">

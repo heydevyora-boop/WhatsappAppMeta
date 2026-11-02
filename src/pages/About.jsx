@@ -1,19 +1,30 @@
-import { company } from '@/config/site';
-import { corporateNarrative, serviceStandards, infrastructureStats } from '@/data/company';
+import { company, gst } from '@/config/site';
+import { businessOverview, messagingPractices, registrationFacts } from '@/data/company';
 import TrustBanner from '@/components/layout/TrustBanner';
 import SectionHeading from '@/components/ui/SectionHeading';
 import FeatureCard from '@/components/ui/FeatureCard';
 import StandardCard from '@/components/ui/StandardCard';
 import StatCard from '@/components/ui/StatCard';
+import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
-import EditorialImage from '@/components/sections/EditorialImage';
+import DataField from '@/components/ui/DataField';
 import RegistryRecord from '@/components/sections/RegistryRecord';
 import LocationSection from '@/components/sections/LocationSection';
 import ComplianceChecklist from '@/components/sections/ComplianceChecklist';
 import usePageTitle from '@/hooks/usePageTitle';
 
+/** Business information summary, as recorded on the GST certificate. */
+const BUSINESS_INFORMATION = [
+  { label: 'Trade Name', value: company.tradeName },
+  { label: 'Legal Name', value: company.legalName },
+  { label: 'Business Constitution', value: company.constitution },
+  { label: 'GST Registration Number', value: gst.gstin, tnum: true },
+  { label: 'Type of Registration', value: gst.registrationType },
+  { label: 'Registered Since', value: gst.validFrom, tnum: true },
+];
+
 export default function About() {
-  usePageTitle(`About ${company.name} — Corporate Profile & Verified Credentials`);
+  usePageTitle(`About ${company.tradeName} — Business & GST Registration Details`);
 
   return (
     <>
@@ -24,47 +35,69 @@ export default function About() {
         <div className="inline-flex items-center gap-2 self-start bg-surface-container-low px-3 py-1.5 rounded-full shadow-sm">
           <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" aria-hidden="true" />
           <span className="font-label-sm text-label-sm text-on-surface font-semibold tracking-tight">
-            Corporate Profile • Verified Business Entity
+            {company.tagline}
           </span>
         </div>
 
         <div className="flex flex-col gap-space-xs">
           <span className="font-label-md text-label-md text-secondary uppercase tracking-wider">
-            About {company.name}
+            About {company.tradeName}
           </span>
           <h1 className="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight">
-            Built for Verified, Compliant Enterprise Communication
+            A Proprietorship Business in Bhopal, Madhya Pradesh
           </h1>
         </div>
 
         <p className="font-body-md text-body-md md:font-body-lg md:text-body-lg text-on-surface-variant max-w-3xl">
-          {company.name} is a registered communications provider delivering authenticated
-          transactional and support messaging channels for global organizations. Every integration
-          we operate is built on documented compliance, auditable infrastructure and verified
-          business identity.
+          {company.tradeName} is a proprietorship business owned by {company.legalName}, registered
+          under the Goods and Services Tax Act, 2017 and operating from the Govindpura industrial
+          area of Bhopal, Madhya Pradesh, India.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-xs">
-          {infrastructureStats.map((stat) => (
-            <StatCard key={stat.label} {...stat} />
+          {registrationFacts.map((fact) => (
+            <StatCard key={fact.label} {...fact} />
           ))}
         </div>
       </section>
 
-      <EditorialImage />
-
-      {/* Who we are */}
+      {/* Business Information */}
       <section className="bg-surface-container-low">
         <div className="container-page py-space-lg lg:py-space-xl flex flex-col gap-space-lg">
           <SectionHeading
             icon="badge"
-            eyebrow="Corporate Audit Dossier"
-            title="Company Overview & Official Credentials"
-            description="Strict compliance documentation provided for verified partner onboarding, transparency benchmarks, and operational validation."
+            eyebrow="Business Information"
+            title="Business &amp; Registration Details"
+            description="The details below are transcribed from our GST Registration Certificate (Form GST REG-06)."
           />
 
+          <Card className="p-space-md flex flex-col gap-space-md">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
+              {BUSINESS_INFORMATION.map((item) => (
+                <DataField key={item.label} label={item.label}>
+                  <span
+                    className={`font-body-md text-body-md text-on-surface font-medium ${
+                      item.tnum ? 'tnum' : ''
+                    }`}
+                  >
+                    {item.value}
+                  </span>
+                </DataField>
+              ))}
+            </div>
+
+            <div className="pt-space-xs border-t border-outline-variant">
+              <DataField label="Registered Business Address" className="pt-space-sm">
+                <span className="font-body-md text-body-md text-on-surface">{company.address}</span>
+                <span className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Business location: Bhopal, {company.state}, {company.country}
+                </span>
+              </DataField>
+            </div>
+          </Card>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-space-sm">
-            {corporateNarrative.map((item) => (
+            {businessOverview.map((item) => (
               <FeatureCard key={item.title} {...item} />
             ))}
           </div>
@@ -73,10 +106,10 @@ export default function About() {
 
           <div className="flex flex-col gap-space-sm">
             <span className="font-label-md text-label-md text-outline uppercase tracking-wider">
-              Enterprise Service Standards
+              How We Message Customers
             </span>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-space-sm">
-              {serviceStandards.map((item) => (
+              {messagingPractices.map((item) => (
                 <StandardCard key={item.title} {...item} />
               ))}
             </div>
@@ -92,14 +125,14 @@ export default function About() {
         <div className="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col items-center text-center gap-space-sm">
           <div className="flex flex-col gap-1">
             <span className="font-label-lg text-label-lg text-on-surface font-semibold">
-              Need our verification dossier for a partner review?
+              Have a question about our business?
             </span>
             <span className="font-body-sm text-body-sm text-on-surface-variant">
-              Our compliance desk responds to documentation requests within one business day.
+              Send us an enquiry and we will get back to you.
             </span>
           </div>
           <Button to="/contact" icon="arrow_forward" iconPosition="right" className="mt-1">
-            Contact Enterprise Team
+            Contact Us
           </Button>
         </div>
       </section>

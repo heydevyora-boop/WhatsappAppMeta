@@ -1,84 +1,91 @@
-/** Categories of data collected (Clause 1). */
+/**
+ * Privacy Policy content.
+ * Describes what the business actually does with customer information.
+ * No certification or compliance-standard claims.
+ */
+
+/** Categories of information collected (Clause 1). */
 export const dataCollected = [
   {
     icon: 'contact_mail',
-    title: 'Contact & Identification Data',
+    title: 'Contact Information',
     description:
-      'Full legal name, business email address, direct phone line, corporate job title, and affiliated entity registry details.',
+      'Your name, phone number (including your WhatsApp number) and email address, when you share them with us through an enquiry, a WhatsApp message or in the course of doing business with us.',
   },
   {
-    icon: 'query_stats',
-    title: 'Inquiry & Support Telemetry',
+    icon: 'chat',
+    title: 'WhatsApp Messages & Communication Data',
     description:
-      'Messages submitted through verified portal channels, customer service intake tickets, and diagnostic transaction timestamps.',
+      'The content of the WhatsApp messages you exchange with us, along with message timestamps and delivery status, so that we can read, answer and keep track of your conversation.',
+  },
+  {
+    icon: 'inventory_2',
+    title: 'Enquiry & Order Details',
+    description:
+      'What you ask us about, the products or services you are interested in, and any notes we record while handling your enquiry or order.',
   },
   {
     icon: 'devices',
-    title: 'System & Network Information',
+    title: 'Basic Technical Information',
     description:
-      'IP addresses, browser client headers, device operating system parameters, and authenticated session logs required to prevent unauthorized access.',
+      'Standard information your browser sends when you visit this website, such as your IP address and browser type, used to keep the site working and secure.',
   },
 ];
 
-/** Lawful bases for processing (Clause 2). */
-export const processingBases = [
+/** Why the information is collected (Clause 2). */
+export const processingPurposes = [
   {
-    title: 'Provision of Service:',
-    description:
-      'Facilitating verified business communications, enterprise integration endpoints, and service requests.',
+    title: 'Answering Your Enquiry:',
+    description: 'Replying to the questions you send us by WhatsApp, email, phone or this website.',
   },
   {
-    title: 'Customer Technical Support:',
+    title: 'Managing Customer Leads:',
     description:
-      'Responding proactively to authorized account requests, resolving platform inquiries, and diagnosing API transmission errors.',
+      'Recording and following up on enquiries so that we do not lose track of a customer request.',
   },
   {
-    title: 'Regulatory Compliance:',
+    title: 'Customer Communication & Service:',
     description:
-      'Adhering to relevant statutory requirements, auditing standards, anti-fraud rules, and contractual terms.',
+      'Sending order updates, appointment or delivery information, and answering support questions.',
+  },
+  {
+    title: 'Business Records:',
+    description:
+      'Keeping the records we are required to keep as a GST-registered business in India.',
   },
 ];
 
-/** Meta / WhatsApp processing standards (Clause 3). */
-export const metaStandards = [
+/** Third parties involved in processing (Clause 4). */
+export const thirdParties = [
   {
-    title: 'Adherence to Meta Platform Terms',
+    title: 'Meta — WhatsApp Business Platform',
     description:
-      'Data exchanged via Meta-facilitated interfaces is processed solely in accordance with Meta Commercial Terms, Meta Developer Policies, and WhatsApp Business Terms of Service.',
+      'We use the WhatsApp Business Platform (Cloud API) to send and receive messages on our own business numbers. Messages you send us pass through Meta’s systems and are handled under Meta’s and WhatsApp’s own terms and privacy policies.',
   },
   {
-    title: 'Sub-processor Disclosures',
+    title: 'Website & IT Service Providers',
     description:
-      'Disclosures are limited exclusively to SOC-2 and ISO 27001 accredited cloud hosting providers acting strictly as contracted processors under formal Data Processing Addenda (DPA).',
+      'Providers who host this website and the software we use to manage enquiries. They may process information only to provide that service to us.',
+  },
+  {
+    title: 'When the Law Requires It',
+    description:
+      'We may disclose information where we are required to do so by applicable Indian law, or by a competent court or government authority.',
   },
 ];
 
-/** Security controls (Clause 4). */
-export const securityControls = [
-  {
-    icon: 'lock',
-    title: 'Encryption',
-    description: 'TLS 1.3 in-transit and AES-256 for all stationary databases.',
-  },
-  {
-    icon: 'badge',
-    title: 'Access Rights',
-    description: 'Role-based access limitation (RBAC) with mandated hardware MFA.',
-  },
-];
-
-/** Data subject rights (Clause 5). */
+/** Rights available to customers (Clause 6). */
 export const dataRights = [
-  { title: 'Right of Access', action: 'Request copy' },
-  { title: 'Right of Rectification', action: 'Correct inaccuracies' },
-  { title: 'Right to Deletion', action: 'Erase records' },
-  { title: 'Right to Restrict or Object', action: 'Halt processing' },
+  { title: 'Ask what we hold', action: 'Request a copy' },
+  { title: 'Correct your details', action: 'Fix inaccuracies' },
+  { title: 'Ask us to delete', action: 'Erase records' },
+  { title: 'Stop receiving messages', action: 'Reply STOP' },
 ];
 
 /** Jump-navigation shortcuts. */
 export const jumpLinks = [
-  { href: '#section-1', label: '1. Data Collected' },
-  { href: '#section-3', label: '3. Meta/WhatsApp' },
-  { href: '#section-5', label: '5. User Rights' },
-  { href: '#section-6', label: '6. DPO Contact' },
+  { href: '#section-1', label: '1. What We Collect' },
+  { href: '#section-3', label: '3. WhatsApp' },
+  { href: '#section-5', label: '5. Retention' },
+  { href: '#section-7', label: '7. Contact Us' },
 ];

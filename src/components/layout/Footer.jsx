@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { company, legalLinks } from '@/config/site';
+import { company, gst, legalLinks } from '@/config/site';
 import Icon from '@/components/ui/Icon';
 import ContactLine from '@/components/ui/ContactLine';
 
@@ -11,14 +11,26 @@ export default function Footer() {
           <div className="flex flex-col gap-space-md md:max-w-md">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2">
-                <Icon name="verified_user" className="text-secondary text-[20px]" />
+                <Icon name="storefront" className="text-secondary text-[20px]" />
                 <span className="font-headline-sm text-headline-sm text-on-surface">
-                  {company.name}
+                  {company.tradeName}
                 </span>
               </div>
               <span className="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary font-semibold whitespace-nowrap">
-                Verified Business
+                GST Registered
               </span>
+            </div>
+
+            {/* Statutory business identification */}
+            <div className="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+              <p>A {company.constitution} Business</p>
+              <p>
+                Legal Name:{' '}
+                <span className="text-on-surface font-medium">{company.legalName}</span>
+              </p>
+              <p>
+                GSTIN: <span className="text-on-surface font-medium tnum">{gst.gstin}</span>
+              </p>
             </div>
 
             <address className="not-italic space-y-1 font-body-sm text-body-sm text-on-surface-variant">
@@ -54,7 +66,7 @@ export default function Footer() {
         </div>
 
         <p className="font-label-sm text-label-sm text-outline">
-          © {company.foundedYear} {company.name}. All rights reserved.
+          © {new Date().getFullYear()} {company.tradeName}. All rights reserved.
         </p>
       </div>
     </footer>

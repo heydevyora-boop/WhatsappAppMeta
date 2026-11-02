@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Card from '@/components/ui/Card';
 import FormField from '@/components/ui/FormField';
 import Button from '@/components/ui/Button';
@@ -38,8 +39,8 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
           <FormField
             id="fullName"
-            label="Full Legal Name"
-            placeholder="e.g. Johnathan Vance"
+            label="Full Name"
+            placeholder="Your full name"
             autoComplete="name"
             required
             value={values.fullName}
@@ -47,9 +48,9 @@ export default function ContactForm() {
           />
           <FormField
             id="workEmail"
-            label="Work / Corporate Email"
+            label="Email Address"
             type="email"
-            placeholder="name@company.com"
+            placeholder="you@example.com"
             autoComplete="email"
             required
             value={values.workEmail}
@@ -59,9 +60,9 @@ export default function ContactForm() {
 
         <FormField
           id="phoneNum"
-          label="Direct Contact Number"
+          label="Phone Number"
           type="tel"
-          placeholder="+1 (555) 000-0000"
+          placeholder="+91 00000 00000"
           autoComplete="tel"
           required
           value={values.phoneNum}
@@ -70,24 +71,27 @@ export default function ContactForm() {
 
         <FormField
           id="messageText"
-          label="Inquiry or Case Details"
+          label="Your Enquiry"
           as="textarea"
           rows={4}
-          placeholder="Detail your organization's messaging requirements or verification request..."
+          placeholder="Tell us about your enquiry..."
           required
           value={values.messageText}
           onChange={handleChange}
         />
 
         <Button type="submit" icon="send" className="mt-2" fullWidth>
-          Send Message to Compliance Desk
+          Send Enquiry
         </Button>
 
         <div className="flex items-start gap-2 pt-1 text-on-surface-variant">
           <Icon name="security" className="text-secondary text-[16px] mt-0.5 flex-shrink-0" />
           <p className="font-label-sm text-label-sm">
-            We reply within 1 business day. Your information is protected under our Meta compliant
-            Privacy Policy.
+            The details you send are used only to respond to your enquiry. See our{' '}
+            <Link className="underline hover:text-on-surface" to="/privacy-policy">
+              Privacy Policy
+            </Link>
+            .
           </p>
         </div>
       </form>
@@ -104,7 +108,7 @@ export default function ContactForm() {
               Message Dispatched Successfully
             </span>
             <span className="font-label-sm text-label-sm text-on-surface-variant">
-              Our compliance desk will acknowledge receipt within 24 business hours.
+              Thank you for getting in touch. We will respond to your enquiry.
             </span>
           </div>
         </div>

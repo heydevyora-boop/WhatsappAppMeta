@@ -33,10 +33,10 @@ export default function Navbar() {
             </button>
           )}
 
-          <Link to="/" className="flex items-center gap-space-sm min-w-0" aria-label={`${company.name} — home`}>
+          <Link to="/" className="flex items-center gap-space-sm min-w-0" aria-label={`${company.tradeName} — home`}>
             <img
               src={logo}
-              alt={`${company.name} corporate logo`}
+              alt={`${company.tradeName} logo`}
               className="h-8 w-auto object-contain flex-shrink-0"
               width="32"
               height="32"
@@ -53,24 +53,18 @@ export default function Navbar() {
                 </>
               ) : (
                 <>
-                  <span className="flex items-center gap-1">
-                    <span className="font-label-md text-label-md text-on-surface tracking-tight truncate">
-                      {company.name}
-                    </span>
-                    <Icon name="verified" className="text-[14px] text-secondary" />
+                  <span className="font-label-md text-label-md text-on-surface tracking-tight truncate">
+                    {company.tradeName}
                   </span>
                   <span className="font-label-sm text-label-sm text-on-surface-variant truncate md:hidden">
-                    {company.tagline.split('•')[0].trim()}
+                    {company.constitution}
                   </span>
                 </>
               )}
               {/* Desktop keeps a single consistent brand lockup */}
               {documentTitle && (
-                <span className="hidden md:flex items-center gap-1">
-                  <span className="font-label-md text-label-md text-on-surface tracking-tight">
-                    {company.name}
-                  </span>
-                  <Icon name="verified" className="text-[14px] text-secondary" />
+                <span className="hidden md:block font-label-md text-label-md text-on-surface tracking-tight">
+                  {company.tradeName}
                 </span>
               )}
             </span>
@@ -103,7 +97,7 @@ export default function Navbar() {
             to="/contact"
             className="hidden lg:inline-flex items-center gap-2 bg-secondary text-on-secondary px-4 py-2 rounded-lg shadow-sm font-label-lg text-label-lg hover:opacity-95 transition-all"
           >
-            <span>Contact Team</span>
+            <span>Contact Us</span>
             <Icon name="arrow_forward" className="text-[18px]" />
           </Link>
           <span
